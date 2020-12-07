@@ -495,6 +495,10 @@ We can use string functions we've learned before with 'str', like:<br>
 ```C
 printf("%d\n", strlen(str)); // Prints out 11. (Does not include the string ending '\0')
 ```
+
+<br>
+<br>
+
 To get a bit more comfortable with dynamic memory allocation and string operations, let's make a small program that copies a string to newly allocated memory:<br>
 ```C
 	const char* str = "hello doomy"; // This is our string; Again, *str is a pointer that holds the address of the first character of our string.
@@ -509,6 +513,7 @@ To get a bit more comfortable with dynamic memory allocation and string operatio
 ```
 **Note:** When we allocate memory we say "strlen(str) + 1", this is because strlen() returns the amount of characters in a string, not including the string ending '\0', so we need some extra space.
 
+<br>
 <br>
 
 While we're here, let's practice a bit more with dynamic memory allocation and pointers.<br>
