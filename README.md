@@ -16,8 +16,11 @@ Functions that do not return a value are type **void** functions. Typically you 
 The general way of defining a **void** function is the following:
 
 *void functionName(parameterList)*
+
 *{*
+
 	*Statements*
+	
 *}*
 
 **Let's define and look at a function that displays the word 'hello' a given number of times.**
