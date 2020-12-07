@@ -356,7 +356,7 @@ This means that you can use **\*p_water** exactly as you would use a type int va
 
 <br>
 
-**Caution with pointers**
+**Caution with pointers**<br>
 Let's look at the following code and see why it's wrong:
 ```C
 	int* fish; // Creating a pointer to an int
