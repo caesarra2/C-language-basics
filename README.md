@@ -250,9 +250,10 @@ Here you can see a list of functions that we can use with strings by including *
 Let's say you wanna store information about candy bars. You might wanna store the name of the candy, the weight and price, etc.
 You would like some sort of data form that can hold all these informations in one unit.
 An array won't be enough, since it can only hold values of the same type, one array can't hold both doubles and ints.
-This is where structures come in. A structure can hold items of more data types!
+This is where structures come in. **A structure can hold items of multiple data types!**
 
 Creating a structure is a two way process.
+
 First, you define a structure description that describes the different types of data that can be stored in a structure.
 Then you can create structure variables that follow the description's plans.
 
