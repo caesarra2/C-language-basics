@@ -41,9 +41,12 @@ The 'int n' parameter means that our function expects an **int** value passed to
 The general way of defining a function that returns a value is the following:
 
 *typeName functionName(parameterList)*
-*{
-	*Statements*
-	*return value;*
+
+*{*
+
+*Statements*
+*return value;*
+	
 *}*
 
 Here *typeName* means that our function will return that specific type of value.
