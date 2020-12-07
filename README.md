@@ -499,6 +499,8 @@ printf("%d\n", strlen(str)); // Prints out 11. (Does not include the string endi
 <br>
 <br>
 
+------
+
 To get a bit more comfortable with dynamic memory allocation and string operations, **let's make a small program that copies a string to newly allocated memory:**<br>
 ```C
 	const char* str = "hello doomy"; // This is our string; Again, *str is a pointer that holds the address of the first character of our string.
