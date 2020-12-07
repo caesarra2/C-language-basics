@@ -512,7 +512,7 @@ To get a bit more comfortable with dynamic memory allocation and string operatio
 
 	free(str2); // Finally the mandatory memory deallocation.
 ```
-**Note:** When we allocate memory we say "strlen(str) + 1", this is because strlen() returns the amount of characters in a string, not including the string ending '\0', so we need some extra space.
+**Note:** When we allocate memory we said "strlen(str) + 1", this is because strlen() returns the amount of characters in a string, not including the string ending '\0', so we need some extra space.
 
 <br>
 <br>
