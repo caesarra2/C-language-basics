@@ -45,6 +45,7 @@ The general way of defining a function that returns a value is the following:
 *{*
 
 *Statements*
+
 *return value;*
 	
 *}*
