@@ -461,10 +461,10 @@ While we are here, let's look at something interesting about pointers and arrays
 	printf("%d\n", *(arpt+1)); // Output: 8 | The second element of the array. Why?
 ```
 
-Let's carefully look at the following: *(arpt+1)<br>
-We take 'arpt' which is currently pointing to the first element of our array and we're adding one to it. Remember, that "adding one to a pointer variable increases its value by the number of bytes of the type to which it points".<br>
-In this case adding one to it means that it points to 4 bytes further in the memory(And we know that array elements are stored in consecutive bytes of memory) so basically it points to the second element.<br>
-The reason why we do: *(arpt+1) instead of *arpt+1 is because they mean completely different things(The expression in parentheses are evaluated first).<br>
+Let's carefully look at the following: *(arpt+1)<br><br>
+We take 'arpt' which is currently pointing to the first element of our array and we're adding one to it. Remember, that "adding one to a pointer variable increases its value by the number of bytes of the type to which it points".<br><br>
+In this case adding one to it means that it points to 4 bytes further in the memory(And we know that array elements are stored in consecutive bytes of memory) so basically it points to the second element.<br><br>
+The reason why we do: *(arpt+1) instead of *arpt+1 is because they mean completely different things(The expression in parentheses are evaluated first).<br><br>
 *The first one means:* "point 4 bytes further in the memory and get the value stored there"<br>
 *And the second one means:* "Get the value stored in the current location and add one to that value"<br>
 
