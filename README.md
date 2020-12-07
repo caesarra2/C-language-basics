@@ -347,12 +347,12 @@ int main()
 }
 ```
 
-As you can see the int variable *water* and the pointer variable *p_water* are just two sides of the same coin.
-The variable *water* represents the value as primary and uses the & operator to get the address.
-On the other hand *p_water* represents the address as primary and uses the * operator to get the value.
+As you can see the int variable *water* and the pointer variable *p_water* are just two sides of the same coin.\
+The variable *water* represents the value as primary and uses the & operator to get the address.\
+On the other hand *p_water* represents the address as primary and uses the * operator to get the value.\
 
-Because *p_water* points to *water*, *\*p_water*' and *water* are completely equivalent(Note the addresses in the example program above)!
-This means that you can use *\*p_water* exactly as you would use a type int variable.
+Because *p_water* points to *water*, *\*p_water*' and *water* are completely equivalent(Note the addresses in the example program above)!\
+This means that you can use *\*p_water* exactly as you would use a type int variable.\
 
 **Caution with pointers**
 Let's look at the following code and see why it's wrong:
@@ -361,6 +361,9 @@ Let's look at the following code and see why it's wrong:
 	*fish = 12; // Where would we place this value?
 ```
 Sure, 'fish' is a pointer. But where does it point? So where is the value '12' placed? We can't say.
+
+<br>
+
 ***"Pointer Golden Rule: Always initialize a pointer to a definite and appropriate address before you apple the * operator to it!***
 
 -----------------------------------------------------------------------------------
