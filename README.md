@@ -347,12 +347,14 @@ int main()
 }
 ```
 
-As you can see the int variable *water* and the pointer variable *p_water* are just two sides of the same coin.\
-The variable *water* represents the value as primary and uses the & operator to get the address.\
-On the other hand *p_water* represents the address as primary and uses the * operator to get the value.\
+As you can see the int variable **water** and the pointer variable **p_water** are just two sides of the same coin.<br>
+The variable **water** represents the value as primary and uses the & operator to get the address.<br>
+On the other hand **p_water** represents the address as primary and uses the * operator to get the value.
+<br>
+Because **p_water** points to **water**, **\*p_water** and **water** are completely equivalent(Note the addresses in the example program above)!<br>
+This means that you can use **\*p_water** exactly as you would use a type int variable.<br>
 
-Because *p_water* points to *water*, *\*p_water*' and *water* are completely equivalent(Note the addresses in the example program above)!\
-This means that you can use *\*p_water* exactly as you would use a type int variable.\
+<br>
 
 **Caution with pointers**
 Let's look at the following code and see why it's wrong:
