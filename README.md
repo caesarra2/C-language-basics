@@ -147,6 +147,8 @@ Important: 'arraySize' cannot be a variable whose value is set while the program
 ```C
 int main()
 {
+	//THIS IS BAD
+	
 	int size;
 	printf("Enter array size: ");
 	scanf("%d", &size);
