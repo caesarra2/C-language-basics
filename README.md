@@ -179,6 +179,8 @@ A very important thing is that you can't just simply copy an array's content int
 ```C
 my_array = second_array; // Error!
 ```
+<br>
+<br>
 
 If you leave the brackets ( [] ) empty when you initialize an array, the compiler will count the elements for you.
 In this case the main concern might be that you don't know how large the array is (Which is useful to know, when for example you wanna go through each element with a loop).
