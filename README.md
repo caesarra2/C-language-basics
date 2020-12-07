@@ -224,6 +224,8 @@ char second[] = "Not hello"; // Let the compiler count
 ```
 This way the null character is automatically included.
 
+<br>
+
 This brings up the important fact that the following two are not equal.
 ```C
 char ch = 'S'; // Fine
