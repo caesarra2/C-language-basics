@@ -199,6 +199,8 @@ printf("%d", sizeof(int)); // Output: 4, which means an 'int' is 4 bytes in size
 ```
 We know that our array is 20 bytes in size, and one 'int' is 4 bytes, so if we divide the size of the array with the size of a type of an element, we get the amount of elements in an array. (Which is 5 in this case)
 
+<br>
+
 ## Strings
 
 What is a string? A string is a series of characters stored in consecutive bytes of memory. (This is important to remember)
