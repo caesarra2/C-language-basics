@@ -36,7 +36,7 @@ void showHello(int n)
 ```
 The 'int n' parameter means that our function expects an **int** value passed to when you call this function.
 
-#### Functions with a return value
+#### Now let's look at functions with a return value
 
 The general way of defining a function that returns a value is the following:
 
