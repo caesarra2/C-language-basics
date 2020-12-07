@@ -19,7 +19,7 @@ The general way of defining a **void** function is the following:
 
 *{*
 
-	*Statements*
+ *Statements*
 	
 *}*
 
