@@ -421,7 +421,7 @@ free(ap); // Not allowed, memory is not allocated by 'malloc()'
 ## Using calloc() to create dynamic arrays
 
 Typically you use dynamic memory allocation with larger chunks of data, such as arrays, strings, etc.<br>
-Suppose, for example you're writing a program that might or might need an array, depending on information given to the program while running.<br>
+Suppose, for example you're writing a program that might or might not need an array, depending on information given to the program while running.<br>
 If you create an array by declaring it, the space is allocated when the program is compiled. Whether or not the program finally uses the array, the array is still there, using up memory.<br>
 But with *calloc()* you can create an array during runtime if you need it, or skip creating it if you don't need it. Or you can even specify array size while the program is running.<br>
 *Side note: malloc() and calloc() work in a similar way, but the difference is that calloc() initializes the allocated memory block to 0, so it's easier for us to use.*
