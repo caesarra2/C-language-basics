@@ -480,7 +480,7 @@ Remember, that  the name of an array(Such as a string, which is an array of char
 	printf("%s", &ar[0]); // Output: asd
 ```
 
-With string you might have encountered something like the following:<br>
+With strings you might have encountered something like the following:<br>
 ```C
 const char* str = "hello world";
 ```
@@ -499,14 +499,13 @@ printf("%d\n", strlen(str)); // Prints out 11. (Does not include the string endi
 <br>
 <br>
 
-To get a bit more comfortable with dynamic memory allocation and string operations, let's make a small program that copies a string to newly allocated memory:<br>
+To get a bit more comfortable with dynamic memory allocation and string operations, **let's make a small program that copies a string to newly allocated memory:**<br>
 ```C
 	const char* str = "hello doomy"; // This is our string; Again, *str is a pointer that holds the address of the first character of our string.
 
 	char* str2 = (char*)calloc(strlen(str) + 1, sizeof(char)); // We request enough memory that can hold our string.
 
 	strcpy(str2, str); // Then we copy "hello doomy" to the memory we just allocated.
-
 	printf("%s\n", str2); // Prints: hello doomy
 
 	free(str2); // Finally the mandatory memory deallocation.
@@ -517,7 +516,7 @@ To get a bit more comfortable with dynamic memory allocation and string operatio
 <br>
 
 While we're here, let's practice a bit more with dynamic memory allocation and pointers.<br>
-Let's make a program that asks the user how large of an array they want to create, and ask them to fill it up with numbers of their choice.<br>
+**Let's make a program that asks the user how large of an array they want to create, and ask them to fill it up with numbers of their choice.**<br>
 ```C
 int main()
 {
