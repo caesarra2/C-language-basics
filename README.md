@@ -484,7 +484,7 @@ With string you might have encountered something like the following:<br>
 ```C
 const char* str = "hello world";
 ```
-Here '*str' is a pointer to 'char' that holds the address of "hello world".<br>
+Here '*str' is a pointer to 'char' that holds the address of the first character of "hello world".<br>
 
 In the following code you tell printf() to display 'str' (Which holds the address of the first character of the string "hello world").<br>
 Then printf() "walks" in the memory from that address and prints out everything until it reaches the string ending '\0' (Which is automatically there because we used "").<br>
