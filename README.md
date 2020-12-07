@@ -158,7 +158,8 @@ int main()
 	return 0; 
 }
 ```
-
+<br>
+<br>
 A useful thing is that you can access an array's elemets individually. The way to do this is to use an index(A number) in brackets.
 Important: 
 - Array numbering starts with 0. This means that the first element of the array *months* is *months[0]* and the last is *months[11]*!
