@@ -231,6 +231,9 @@ This brings up the important fact that the following two are not equal.
 char ch = 'S'; // Fine
 char ch = "S"; // Error, illegal type mismatch (This is actually two characters, an 'S' and a '\0')
 ```
+<br>
+<br>
+
 **String operations**
 
 We've learned that you can't just simply copy an array to another with just an assignment operator(=), and this applies to strings as well but luckily, including '#include <string.h>' gives us many useful functions to work with.
