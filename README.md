@@ -84,6 +84,8 @@ int bigger(int a, int b)
 		return b;
 }
 ```
+<br>
+<br>
 
 ### Calling Functions
 
