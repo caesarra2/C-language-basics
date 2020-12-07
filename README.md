@@ -203,7 +203,7 @@ We know that our array is 20 bytes in size, and one 'int' is 4 bytes, so if we d
 
 ## Strings
 
-What is a string? A string is a series of characters stored in consecutive bytes of memory. (This is important to remember)
+What is a string? **A string is a series of characters stored in consecutive bytes of memory, terminated by a null character.** (This is important to remember)
 This implies that you can store a string as an array of 'char', with each character kept in its own array element.
 
 C language style strings have a special feature. The last character of every string must be the *null character*. It is written as \0 and it marks the end of a string.
