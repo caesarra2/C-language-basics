@@ -66,12 +66,13 @@ int sumIntegers(int a, int b)
 
 
 
-
-
+<br>
+<br>
 
 
 A function terminates after executing a return statement. 
 So if a function has more than one return statement the function terminates after it executes the first return satement.
+
 **Let's look at an example; This function compares two integers and returns the larger value.**
 ```C
 // Again, returning an 'int' and expecting two integers as parameters.
