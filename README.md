@@ -90,7 +90,8 @@ int bigger(int a, int b)
 ### Calling Functions
 
 Calling a function basically means "using" a function, which has been already defined.
-In the next code snippet we're going to call 'sumIntegers' and 'showHello' functions.
+
+**In the next code snippet we're going to call 'sumIntegers' and 'showHello' functions.**
 ```C
 //Function definition
 void showHello(int n)
