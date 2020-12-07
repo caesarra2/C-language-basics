@@ -126,7 +126,7 @@ int main()
 -----------------------------------------------------------------------------------
 
 ## Arrays
-What is an array? An array is a data form that can hold several values, all of one type!
+What is an array? **An array is a data form that can hold several values, all of one type!**
 
 To create an array, you use a declaration statement which needs to indicate three things:
 - The type of value to be stored in each element(For example int, double, etc)
