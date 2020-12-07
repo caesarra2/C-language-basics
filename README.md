@@ -1,4 +1,4 @@
-# Functions, Arrays, Pointers and Dynamic Memory Allocation in C Language.
+# Functions, Arrays, Pointers and other features in C Language. 
 -----------------------------------------------------------------------------------
 ## Functions
 What is a function? A function is a group of statements that together perform a task.
