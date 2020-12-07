@@ -183,6 +183,7 @@ my_array = second_array; // Error!
 <br>
 
 If you leave the brackets ( [] ) empty when you initialize an array, the compiler will count the elements for you.
+
 In this case the main concern might be that you don't know how large the array is (Which is useful to know, when for example you wanna go through each element with a loop).
 ```C
 int third_array[] = {1, 2, 3, 4, 7}; // The compiler makes 'third_array' an array of 5 elements.
