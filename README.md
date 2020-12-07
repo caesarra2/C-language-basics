@@ -318,6 +318,8 @@ For example if 'cats' is a variable, '&cats' is its address.
 
 	// Note that we use "%d" to print integers and "%p" to display pointer address.
 ```
+<br>
+<br>
 
 **A special type of variable — the pointer — holds the address of a value.**
 This means that the name of the pointer represents the location. Applying the * operator yields the value at the location.
