@@ -399,6 +399,9 @@ int main()
 	return 0; 
 }
 ```
+<br>
+<br>
+
 Allocating memory with *malloc()* is just half of the fun of memory management. The other half is deallocating that memory when we no longer need it.<br>
 We use the *free()* function to deallocate memory which has been previously allocated by *malloc()*. This removes the memory which 'p1' points to; doesn't remove the pointer itself, so you could possibly reuse 'p1' later if needed.<br>
 A **very important rule** is that you should always balance the usage of *malloc()* and *free()*, otherwise you could end up with a memory leak — that is, memory that has been allocated but can no longer be used.<br>
