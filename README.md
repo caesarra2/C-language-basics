@@ -163,7 +163,7 @@ int main()
 
 A useful thing is that you can access an array's elemets individually. The way to do this is to use an index(A number) in brackets.
 Important: 
-- Array numbering starts with 0. This means that the first element of the array *months* is *months[0]* and the last is *months[11]*!
+- Array numbering starts with 0. This means that the first element of the array *months[12]* is *months[0]* and the last is *months[11]*!
 - The compiler doesn't check if you use a valid subscript. For example the compiler won't complain if you assign a value to *months[771]*, but it might cause problems when you run the program, so you need to pay attention to this!
 
 
