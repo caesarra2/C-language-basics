@@ -372,18 +372,18 @@ Sure, 'fish' is a pointer. But where does it point? So where is the value '12' p
 
 ## Dynamic memory allocation
 
-The true worth of pointers comes into play when you allocate 'unnamed' memory during runtime to hold values. In this case pointers become the only way to access to that memory.
-We'll be using a function named *malloc()* which is defined in 'stdlib.h' to allocate memory during our program's run time.
-*malloc()* allocates the requested memory and returns a pointer to it. Let's look at an example.
+The true worth of pointers comes into play when you allocate 'unnamed' memory during runtime to hold values. In this case pointers become the only way to access to that memory.<br>
+We'll be using a function named *malloc()* which is defined in 'stdlib.h' to allocate memory during our program's run time.<br>
+*malloc()* allocates the requested memory and returns a pointer to it. Let's look at an example.<br>
 ```C
 int* p1 = (int*)malloc(sizeof(int));
 ```
-In the code above we create a pointer 'p1' that can hold an address.
-Then we call the function 'malloc()' which expects a parameter; how many bytes to allocate. (In this case we tell it to allocate 'sizeof(int)' bytes of memory which is usually 4 bytes.)
-The return type of malloc is 'void*' so we need to "cast" it to the type we want to work with, which is '(int*)' in this example. (This step might not needed, depending on compiler.)
+In the code above we create a pointer 'p1' that can hold an address.<br>
+Then we call the function 'malloc()' which expects a parameter; how many bytes to allocate. (In this case we tell it to allocate 'sizeof(int)' bytes of memory which is usually 4 bytes.)<br>
+The return type of malloc is 'void*' so we need to "cast" it to the type we want to work with, which is '(int*)' in this example. (This step might not needed, depending on compiler.)<br>
 
-Once these are done, *malloc()* returns the pointer to the beginning of newly allocated memory, which is then assigned to 'p1'.
-Then we can use the allocated memory like we did before with pointers, for example:
+Once these are done, *malloc()* returns the pointer to the beginning of newly allocated memory, which is then assigned to 'p1'.<br>
+**Then we can use the allocated memory like we did before with pointers, for example:**
 ```C
 int main()
 {
@@ -399,10 +399,10 @@ int main()
 	return 0; 
 }
 ```
-Allocating memory with *malloc()* is just half of the fun of memory management. The other half is deallocating that memory when we no longer need it.
-We use the *free()* function to deallocate memory which has been previously allocated by *malloc()*. This removes the memory which 'p1' points to; doesn't remove the pointer itself, so you could possibly reuse 'p1' later if needed.
-A **very important rule** is that you should always balance the usage of *malloc()* and *free()*, otherwise you could end up with a memory leak — that is, memory that has been allocated but can no longer be used.
-**Also important** that you can't use *free()* to to free memory created by declaring ordinary variables(That is handled automatically when the program exits).
+Allocating memory with *malloc()* is just half of the fun of memory management. The other half is deallocating that memory when we no longer need it.<br>
+We use the *free()* function to deallocate memory which has been previously allocated by *malloc()*. This removes the memory which 'p1' points to; doesn't remove the pointer itself, so you could possibly reuse 'p1' later if needed.<br>
+A **very important rule** is that you should always balance the usage of *malloc()* and *free()*, otherwise you could end up with a memory leak — that is, memory that has been allocated but can no longer be used.<br>
+**Also important** that you can't use *free()* to to free memory created by declaring ordinary variables(That is handled automatically when the program exits).<br>
 ```C
 int* pt = (int*)malloc(sizeof(int)); // Ok
 free(pt); // Ok
@@ -417,11 +417,13 @@ free(ap); // Not allowed, memory is not allocated by 'malloc()'
 
 ## Using calloc() to create dynamic arrays
 
-Typically you use dynamic memory allocation with larger chunks of data, such as arrays, strings, etc.
-Suppose, for example you're writing a program that might or might need an array, depending on information given to the program while running.
-If you create an array by declaring it, the space is allocated when the program is compiled. Whether or not the program finally uses the array, the array is still there, using up memory.
-But with *calloc()* you can create an array during runtime if you need it, or skip creating it if you don't need it. Or you can even specify array size while the program is running.
+Typically you use dynamic memory allocation with larger chunks of data, such as arrays, strings, etc.<br>
+Suppose, for example you're writing a program that might or might need an array, depending on information given to the program while running.<br>
+If you create an array by declaring it, the space is allocated when the program is compiled. Whether or not the program finally uses the array, the array is still there, using up memory.<br>
+But with *calloc()* you can create an array during runtime if you need it, or skip creating it if you don't need it. Or you can even specify array size while the program is running.<br>
 *Side note: malloc() and calloc() work in a similar way, but the difference is that calloc() initializes the allocated memory block to 0, so it's easier for us to use.*
+
+<br>
 
 Creating a dynamic array is quite simple; *calloc()* expects two arguments: how many objects to create and the size of each object. So to create a dynamic array that can hold 10 ints we can do the following:
 ```C
@@ -442,6 +444,9 @@ To access a dynamically created array's elements you can just do it as if it was
 ```
 	
 
+<br>
+<br>
+
 While we are here, let's look at something interesting about pointers and arrays. If you add one to an integer variable, it increases its value by one, BUT **adding one to a pointer variable increases its value by the number of bytes of the type to which it points.** Now this might sound a bit confusing but the upcoming examples might help understand it:
 ```C
 	int arr[3] = { 4, 8, 11 };
@@ -453,18 +458,18 @@ While we are here, let's look at something interesting about pointers and arrays
 	printf("%d\n", *(arpt+1)); // Output: 8 | The second element of the array. Why?
 ```
 
-Let's carefully look at the following: *(arpt+1)
-We take 'arpt' which is currently pointing to the first element of our array and we're adding one to it. Remember, that "adding one to a pointer variable increases its value by the number of bytes of the type to which it points".
-In this case adding one to it means that it points to 4 bytes further in the memory(And we know that array elements are stored in consecutive bytes of memory) so basically it points to the second element.
-The reason why we do: *(arpt+1) instead of *arpt+1 is because they mean completely different things(The expression in parentheses are evaluated first). 
-*The first one means:* "point 4 bytes further in the memory and get the value stored there"
-*And the second one means:* "Get the value stored in the current location and add one to that value"
+Let's carefully look at the following: *(arpt+1)<br>
+We take 'arpt' which is currently pointing to the first element of our array and we're adding one to it. Remember, that "adding one to a pointer variable increases its value by the number of bytes of the type to which it points".<br>
+In this case adding one to it means that it points to 4 bytes further in the memory(And we know that array elements are stored in consecutive bytes of memory) so basically it points to the second element.<br>
+The reason why we do: *(arpt+1) instead of *arpt+1 is because they mean completely different things(The expression in parentheses are evaluated first).<br>
+*The first one means:* "point 4 bytes further in the memory and get the value stored there"<br>
+*And the second one means:* "Get the value stored in the current location and add one to that value"<br>
 
 -----------------------------------------------------------------------------------
 
 ## Pointers and strings
 
-Remember, that  the name of an array(Such as a string, which is an array of chars) is the address to its first element, so the following two printf() behave the same way.
+Remember, that  the name of an array(Such as a string, which is an array of chars) is the address to its first element, so the following two printf() behave the same way.<br>
 ```C
 	char ar[10] = "asd";
 
@@ -472,22 +477,22 @@ Remember, that  the name of an array(Such as a string, which is an array of char
 	printf("%s", &ar[0]); // Output: asd
 ```
 
-With string you might have encountered something like the following:
+With string you might have encountered something like the following:<br>
 ```C
 const char* str = "hello world";
 ```
-Here '*str' is a pointer to 'char' that holds the address of "hello world".
+Here '*str' is a pointer to 'char' that holds the address of "hello world".<br>
 
-In the following code you tell printf() to display 'str' (Which holds the address of the first character of the string "hello world"). 
-Then printf() "walks" in the memory from that address and prints out everything until it reaches the string ending '\0' (Which is automatically there because we used "").
+In the following code you tell printf() to display 'str' (Which holds the address of the first character of the string "hello world").<br>
+Then printf() "walks" in the memory from that address and prints out everything until it reaches the string ending '\0' (Which is automatically there because we used "").<br>
 ```C
 printf("%s", str); // Output: hello world
 ```
-We can use string functions we've learned before with 'str', like:
+We can use string functions we've learned before with 'str', like:<br>
 ```C
 printf("%d\n", strlen(str)); // Prints out 11. (Does not include the string ending '\0')
 ```
-To get a bit more comfortable with dynamic memory allocation and string operations, let's make a small program that copies a string to newly allocated memory:
+To get a bit more comfortable with dynamic memory allocation and string operations, let's make a small program that copies a string to newly allocated memory:<br>
 ```C
 	const char* str = "hello doomy"; // This is our string; Again, *str is a pointer that holds the address of the first character of our string.
 
@@ -499,10 +504,12 @@ To get a bit more comfortable with dynamic memory allocation and string operatio
 
 	free(str2); // Finally the mandatory memory deallocation.
 ```
-Note: When we allocate memory we say "strlen(str) + 1", this is because strlen() returns the amount of characters in a string, not including the string ending '\0', so we need some extra space.
+**Note:** When we allocate memory we say "strlen(str) + 1", this is because strlen() returns the amount of characters in a string, not including the string ending '\0', so we need some extra space.
 
-While we're here, let's practice a bit more with dynamic memory allocation and pointers.
-Let's make a program that asks the user how large of an array they want to create, and ask them to fill it up with numbers of their choice.
+<br>
+
+While we're here, let's practice a bit more with dynamic memory allocation and pointers.<br>
+Let's make a program that asks the user how large of an array they want to create, and ask them to fill it up with numbers of their choice.<br>
 ```C
 int main()
 {
