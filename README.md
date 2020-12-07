@@ -15,7 +15,7 @@ Functions that do not return a value are type **void** functions. Typically you 
 
 The general way of defining a **void** function is the following:
 
-*void functionName(parameterList)*
+*void functionName( parameterList )*
 
 *{*
 
@@ -112,6 +112,7 @@ int main()
 	return 0; // Here 'return 0' only means that our program executed successfully, you can kinda ignore this for now
 }
 ```
+-----------------------------------------------------------------------------------
 
 ## Arrays
 What is an array? An array is a data form that can hold several values, all of one type!
@@ -214,7 +215,10 @@ We've learned that you can't just simply copy an array to another with just an a
 Here you can see a list of functions that we can use with strings by including *string.h*
 
 ![alt text](https://i.gyazo.com/e34da6addadf110b1376745f8f26b28e.png)
+
 *(Link: https://fresh2refresh.com/c-programming/c-function/string-h-library-functions/)*
+
+-----------------------------------------------------------------------------------
 
 ## Structures
 
@@ -263,6 +267,8 @@ int main()
 	return 0; 
 }
 ```
+
+-----------------------------------------------------------------------------------
 
 ## Pointers
 
@@ -328,6 +334,8 @@ Let's look at the following code and see why it's wrong:
 Sure, 'fish' is a pointer. But where does it point? So where is the value '12' placed? We can't say.
 ***"Pointer Golden Rule: Always initialize a pointer to a definite and appropriate address before you apple the * operator to it!***
 
+-----------------------------------------------------------------------------------
+
 ## Dynamic memory allocation
 
 The true worth of pointers comes into play when you allocate 'unnamed' memory during runtime to hold values. In this case pointers become the only way to access to that memory.
@@ -371,6 +379,7 @@ int* ap = &apples; // Ok, the address of 'apples' is assigned to 'ap'
 free(ap); // Not allowed, memory is not allocated by 'malloc()'
 ```
 
+-----------------------------------------------------------------------------------
 
 ## Using calloc() to create dynamic arrays
 
@@ -417,6 +426,7 @@ The reason why we do: *(arpt+1) instead of *arpt+1 is because they mean complete
 *The first one means:* "point 4 bytes further in the memory and get the value stored there"
 *And the second one means:* "Get the value stored in the current location and add one to that value"
 
+-----------------------------------------------------------------------------------
 
 ## Pointers and strings
 
