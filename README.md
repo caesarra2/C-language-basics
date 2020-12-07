@@ -50,7 +50,7 @@ The general way of defining a function that returns a value is the following:
 	
 *}*
 
-Here *typeName* means that our function will return that specific type of value.
+In the sample above *typeName* means that our function will return that specific type of value.
 For example if the *typeName* is *int*, then our funtion will return an *int*.
 Note that the return value cannot be an array; though everything else is possible for example: integers, floating-point numbers, pointers, structures.
 
