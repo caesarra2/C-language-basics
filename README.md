@@ -19,8 +19,8 @@ The general way of defining a **void** function is the following:
 
 *{*
 
- *Statements*
-	
+   *Statements*
+ 
 *}*
 
 **Let's define and look at a function that displays the word 'hello' a given number of times.**
